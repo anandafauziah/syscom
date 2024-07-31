@@ -19,7 +19,7 @@
                         @foreach ($data['new_categories'] as $category)
                             <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                                 <div class="categories__item set-bg"
-                                    data-setbg="{{ asset('storage/app/public/file/category' . $category->thumbnails) }}">
+                                    data-setbg="{{ asset('storage/' . $category->thumbnails) }}">
                                     <div class="categories__text">
                                         <h4>{{ $category->name }}</h4>
                                         <p>{{ $category->Products()->count() }} item</p>
@@ -58,7 +58,7 @@
                     @foreach ($new_categories2->Products()->limit(4)->get() as $product)
                         <div class="col-lg-3 col-md-4 col-sm-6 mix {{ $new_categories2->slug }}">
                             @component('components.frontend.product-card')
-                                @slot('image', asset('storage/app/public' . $product->thumbnails))
+                                @slot('image', asset('storage/' . $product->thumbnails))
                                 @slot('route', route('product.show', ['categoriSlug' => $new_categories2->slug, 'productSlug' =>
                                     $product->slug]))
                                     @slot('name', $product->name)

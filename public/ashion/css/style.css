@@ -132,6 +132,14 @@ ol {
 	content: "";
 }
 
+.set-bg-mahardika {
+	background-color: #000000;
+	background-image: url('http://127.0.0.1:8000/me/img/banner.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: contain;

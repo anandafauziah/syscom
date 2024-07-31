@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 p-0">
-                    <div class="categories__item categories__large__item set-bg"
+                    <div class="categories__item categories__large__item set-bg-mahardika"
                         data-setbg="{{ asset('me') }}/img/banner.png">
                         <div class="categories__text">
                             <p>Selamat datang di PKM STIE Mahardhika 

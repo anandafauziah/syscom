@@ -24,7 +24,7 @@
                         @foreach ($data['product'] as $product)
                         <div class="col-lg-3 col-md-4">
                             @component('components.frontend.product-card')
-                            @slot('image', asset('storage/' . $product->thumbnails))
+                            @slot('image', asset('storage/storage/app/public/file/product' . $product->thumbnails))
                             @slot('route', route('product.show', ['categoriSlug' => $product->Category->slug, 'productSlug' =>
                                 $product->slug]))
                                 @slot('name', $product->name)

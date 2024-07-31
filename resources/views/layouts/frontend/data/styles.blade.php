@@ -1,7 +1,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>{{ $app_name }}</title>
-  <link rel="shortcut icon" href="{{ $app_logo }}" type="image/x-icon">
+<title>PKM STIE Mahardhika</title>
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">

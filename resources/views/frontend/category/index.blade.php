@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a>
+                        <a href="{{ url('/') }}"><i class="fa fa-home"></i> Beranda</a>
                         <span>Category</span>
                     </div>
                 </div>
@@ -21,7 +21,7 @@
             <div class="row">
                 @foreach ($data['category'] as $category)
                     <div class="col-lg-4 col-md-4 col-sm-4 p-0 ">
-                        <div class="categories__item set-bg" data-setbg="{{ asset('storage/' . $category->thumbnails) }}">
+                        <div class="categories__item set-bg" data-setbg="{{ asset('storage//app/public/file/category' . $category->thumbnails) }}">
                             <div class="categories__text">
                                 <h4>{{ $category->name }}</h4>
                                 <p>{{ $category->Products()->count() }} item</p>

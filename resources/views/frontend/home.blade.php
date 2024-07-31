@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-lg-6 p-0">
                     <div class="categories__item categories__large__item set-bg"
-                        data-setbg="{{ asset('me') }}/img/goku.png">
+                        data-setbg="{{ asset('me') }}/img/banner.png">
                         <div class="categories__text">
-                            <p>Beragam Merchandise Anime Mulai Dari Tshirt, Hoddie, Action Figure Semuanya Tersedia Di Anime
+                            <p>Selamat datang di PKM STIE Mahardhika 
                                 Store.</p>
                             <a href="#">Jelajahi Sekarang</a>
                         </div>
@@ -19,7 +19,7 @@
                         @foreach ($data['new_categories'] as $category)
                             <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                                 <div class="categories__item set-bg"
-                                    data-setbg="{{ asset('storage/' . $category->thumbnails) }}">
+                                    data-setbg="{{ asset('storage/app/public/file/category' . $category->thumbnails) }}">
                                     <div class="categories__text">
                                         <h4>{{ $category->name }}</h4>
                                         <p>{{ $category->Products()->count() }} item</p>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <div class="section-title">
-                        <h4>New product</h4>
+                        <h4>Produk Baru</h4>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
@@ -55,11 +55,10 @@
             </div>
             <div class="row property__gallery">
                 @foreach ($data['new_categories'] as $new_categories2)
-                    @foreach ($new_categories2->Products()->limit(4)->get()
-        as $product)
+                    @foreach ($new_categories2->Products()->limit(4)->get() as $product)
                         <div class="col-lg-3 col-md-4 col-sm-6 mix {{ $new_categories2->slug }}">
                             @component('components.frontend.product-card')
-                                @slot('image', asset('storage/' . $product->thumbnails))
+                                @slot('image', asset('storage/app/public' . $product->thumbnails))
                                 @slot('route', route('product.show', ['categoriSlug' => $new_categories2->slug, 'productSlug' =>
                                     $product->slug]))
                                     @slot('name', $product->name)

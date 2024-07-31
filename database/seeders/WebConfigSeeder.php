@@ -25,7 +25,7 @@ class WebConfigSeeder extends Seeder
         WebConfig::create([
             'name'  => 'app_name',
             'label' => 'Application Name',
-            'value' => 'Anime Store',
+            'value' => '',
             'type'  => 0
         ]);
 
